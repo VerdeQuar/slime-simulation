@@ -1,0 +1,21 @@
+[package]
+name = "slime"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+bevy = { version = "0.14", features = ["wayland"] }
+bevy-inspector-egui = "0.25.2"
+bytemuck = { version = "1.17.0", features = ["derive"] }
+crossbeam-channel = "0.5.13"
+iyes_perf_ui = "0.3.0"
+rand = "0.8.5"
+# bevy_mod_sysfail = { version = "7.0.0", default-features = false }
+
+# Enable a small amount of optimization in debug mode
+[profile.dev]
+opt-level = 1
+
+# Enable high optimizations for dependencies (incl. Bevy), but not for our code:
+[profile.dev.package."*"]
+opt-level = 3
