@@ -1,4 +1,5 @@
 A slime simulation compute shader written in wgsl in bevy
+
 i experimented with a lot of different values so the code output propably does not actually look like slime anymore
 
 # Screenshots
